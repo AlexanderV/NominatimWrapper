@@ -36,7 +36,7 @@ RUN pip3 install postal
 
 RUN mkdir /photon
 WORKDIR /photon
-RUN wget --progress=dot:mega https://github.com/komoot/photon/releases/download/0.3.4/photon-0.3.4.jar
+COPY Docker/photon-0.3.5.jar photon-0.3.5.jar
 COPY ${photon_data} photon.tar.gz
 RUN tar xzf photon.tar.gz
 
